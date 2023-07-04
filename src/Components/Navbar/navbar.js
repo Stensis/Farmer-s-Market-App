@@ -1,14 +1,21 @@
 import React from "react";
-import ShoppingCart from "../../Screens/ShoppingCart/ShoppingCart";
-import Search from "../../Screens/SearchButton/Search";
-import Login from "../../Screens/Login screen/login";
 import styles from "./Navbar.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faShoppingCart,
+  faUser,
+  faBasketShopping,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   return (
     <header className={styles.header}>
-      <a href="#" className={styles.logo}>
-        <i className="fas fa-shopping-basket"></i> Mboga
+      <a href="/" className={styles.logo}>
+        <span style={{ paddingRight: "8px", color: "orange" }}>
+          <FontAwesomeIcon icon={faBasketShopping} />
+        </span>
+        Mboga
       </a>
 
       <nav className={styles.navbar}>
@@ -19,21 +26,19 @@ function Navbar() {
         <a href="#review">Review</a>
         <a href="#blogs">Blogs</a>
       </nav>
-{/* 
-      <div className={styles.icons}>
-        <div className={`fas fa-bars ${styles.menuBtn}`} id="menu-btn"></div>
-        <div className={`fas fa-search ${styles.searchBtn}`} id="search-btn">
-          <Search />
-        </div>
-        <div className={`fas fa-shopping-cart ${styles.cartBtn}`} id="cart-btn">
-          <ShoppingCart />
-        </div>
-        <div className={`fas fa-user ${styles.loginBtn}`} id="login-btn">
-          <Login />
-        </div>
-      </div> */}
 
-   
+      <div className={styles.icons}>
+        <div className={`${styles.menuBtn}`} id="menu-btn"></div>
+        <div className={`${styles.searchBtn}`} id="search-btn">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
+        <div className={`${styles.cartBtn}`} id="cart-btn">
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </div>
+        <div className={`${styles.loginBtn}`} id="login-btn">
+          <FontAwesomeIcon icon={faUser} />
+        </div>
+      </div>
     </header>
   );
 }
