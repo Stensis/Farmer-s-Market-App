@@ -1,0 +1,94 @@
+.blogs .heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+  }
+  
+  .blogs .heading span {
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+  }
+  
+  .blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin: 20px;
+  }
+  
+  .blogs .box-container .box {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+  }
+  
+  .blogs .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .blogs .box-container .box .content {
+    padding: 2rem;
+  }
+  
+  .blogs .box-container .box .content .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--border);
+  }
+  
+  .blogs .box-container .box .content .icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+  }
+  
+  .blogs .box-container .box .content .icons a:hover {
+    color: var(--black);
+  }
+  
+  .blogs .box-container .box .content .icons a i {
+    color: var(--orange);
+    padding-right: 0.5rem;
+  }
+  
+  .blogs .box-container .box .content h3 {
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+  }
+  
+  .blogs .box-container .box .content p {
+    line-height: 1.8;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  .btn {
+    align-self: center;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+  }
+  
+  .btn:hover {
+    background: var(--orange);
+    color: #fff;
+  }
