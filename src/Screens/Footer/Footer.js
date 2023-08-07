@@ -75,7 +75,7 @@ function Footer() {
       </div>
 
       <div className={styles.credit}>
-        <span> Irene njuguna </span> | All rights reserved{" "}
+        <span> Irene njuguna 🩷 </span> | All rights reserved{" "}
       </div>
     </section>
   );
