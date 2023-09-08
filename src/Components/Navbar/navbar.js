@@ -30,13 +30,13 @@ function Navbar() {
       <div className={styles.icons}>
         <div className={`${styles.menuBtn}`} id="menu-btn"></div>
         <div className={`${styles.searchBtn}`} id="search-btn">
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon icon={faMagnifyingGlass} aria-label="search" />
         </div>
         <div className={`${styles.cartBtn}`} id="cart-btn">
-          <FontAwesomeIcon icon={faShoppingCart} />
+          <FontAwesomeIcon icon={faShoppingCart} aria-label="cart" />{" "}
         </div>
         <div className={`${styles.loginBtn}`} id="login-btn">
-          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faUser} aria-label="user" />
         </div>
       </div>
     </header>

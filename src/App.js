@@ -11,6 +11,7 @@ import Footer from "./Screens/Footer/Footer";
 function App() {
   return (
     <>
+    <p>i am here</p>
       <Navbar />
       <HomeScreen />
       <Features />
