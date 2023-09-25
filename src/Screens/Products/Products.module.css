@@ -17,6 +17,8 @@
 .products .swiper-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* allow items to wrap to the next line if they don't fit */
+  gap: 1rem;
 }
 
 .products .product-slider {
@@ -80,3 +82,68 @@
   background: var(--orange);
   color: #fff;
 }
+
+
+/* Your existing styles... */
+
+/* Responsive styles for tablet devices */
+@media only screen and (max-width: 768px) {
+  .products .heading {
+    font-size: 2.5rem;
+  }
+
+  .products .product-slider .box img {
+    height: 15rem;
+  }
+
+  .products .product-slider .box h3 {
+    font-size: 2rem;
+  }
+
+  .products .product-slider .box .price {
+    font-size: 1.5rem;
+  }
+
+  .products .product-slider .box .stars i {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 480px) {
+  .products .heading {
+    font-size: 2rem;
+  }
+
+  .products .product-slider .box {
+    width: 95vw; /* setting the card to take 90% of the container's width */
+    /* margin: 0 auto; centering the card */
+  }
+
+  .products .product-slider .box img {
+    height: 22rem; /* this seems a bit too large for a mobile view; you might want to reduce this */
+    width: 90vw; /* setting the image to take 90% of the viewport width */
+  }
+
+  .products .product-slider .box h3 {
+    font-size: 1.5rem;
+  }
+
+  .products .product-slider .box .price {
+    font-size: 1.2rem;
+  }
+
+  .products .product-slider .box .stars i {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+  }
+}
+

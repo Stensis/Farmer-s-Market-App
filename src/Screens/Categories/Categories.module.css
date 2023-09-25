@@ -70,3 +70,54 @@
   background: var(--orange);
   color:#fff;
 }
+
+/* ... your existing styles ... */
+
+/* Responsive styles for tablets */
+@media only screen and (max-width: 768px) {
+  .categories .heading {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  .categories .box-container .box img {
+    height: 13rem;
+  }
+
+  .categories .box-container .box h3,
+  .categories .box-container .box p {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 480px) {
+  .categories .heading {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .categories .box-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .categories .box-container .box img {
+    height: 12rem;
+  }
+
+  .categories .box-container .box h3,
+  .categories .box-container .box p {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,6 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={styles.header}>
       <a href="/" className={styles.logo}>
@@ -18,7 +24,11 @@ function Navbar() {
         Mboga
       </a>
 
-      <nav className={styles.navbar}>
+      <div className={styles.menu} onClick={toggleMenu}>
+        ☰
+      </div>
+
+      <nav className={`${styles.navbar} ${menuOpen ? styles.open : ''}`}>
         <a href="#home">Home</a>
         <a href="#features">Features</a>
         <a href="#products">Products</a>
@@ -28,7 +38,6 @@ function Navbar() {
       </nav>
 
       <div className={styles.icons}>
-        <div className={`${styles.menuBtn}`} id="menu-btn"></div>
         <div className={`${styles.searchBtn}`} id="search-btn">
           <FontAwesomeIcon icon={faMagnifyingGlass} aria-label="search" />
         </div>
